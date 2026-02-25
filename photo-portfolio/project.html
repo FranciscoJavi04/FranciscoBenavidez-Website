@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Project — Your Name</title>
+  <meta name="description" content="Project gallery by Your Name." />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script defer src="js/main.js"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <a class="brand" href="index.html">Your Name</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="navlinks">Menu</button>
+      <nav id="navlinks" class="navlinks" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a class="active" href="gallery.html">Portfolio</a>
+        <a href="resume.html">Resume</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <div class="section-head">
+        <a class="backlink" href="gallery.html">← Back to Portfolio</a>
+        <h1 id="projectTitle">Project</h1>
+        <p id="projectDesc" class="muted"></p>
+      </div>
+
+      <div id="projectGrid" class="masonry"></div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <p class="muted">© <span id="year"></span> Your Name</p>
+      <div class="footer-links">
+        <a href="contact.html">Contact</a>
+        <a href="resume.html">Resume</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

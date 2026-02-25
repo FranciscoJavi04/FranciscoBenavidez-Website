@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Resume — Francisco Benavidez</title>
+  <meta name="description" content="Resume and about section for Francisco Benavidez." />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script defer src="js/main.js"></script>
+</head>
+
+<body>
+  <header class="header">
+    <div class="container nav">
+      <a class="brand" href="index.html">Francisco Benavidez</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="navlinks">Menu</button>
+      <nav id="navlinks" class="navlinks" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="gallery.html">Portfolio</a>
+        <a class="active" href="resume.html">Resume</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <div class="section-head">
+        <h1>About + Resume</h1>
+        <p class="muted">Short bio + job-ready resume section.</p>
+      </div>
+
+      <section class="resume-top">
+        <img class="headshot" src="assets/my_headshot.jpg" alt="My headshot" loading="lazy" />
+        <div>
+          <h2>Francisco Benavidez</h2>
+          <p class="lead">
+            Photographer and creative focused on portraits, events, and brand visuals.
+            I combine strong composition with consistent editing and reliable delivery.
+          </p>
+
+          <div class="resume-links">
+            <a class="chip" href="mailto:francisco.jbenavidez04@gmail.com">francisco.jbenavidez04@email.com</a>
+            <a class="chip" href="tel:+1 (956)443-7200">+1 (956)443-7200</a>
+            <a class="chip" href="https://www.instagram.com/francisco.infocus/" target="_blank" rel="noreferrer">Instagram</a>
+            <a class="chip" href="http://www.linkedin.com/in/FranciscoJBenavidez" target="_blank" rel="noreferrer">LinkedIn</a>
+          </div>
+
+          <div class="btn-row">
+            <a class="btn small" href="contact.html">Hire / Contact</a>
+            <a class="btn ghost small" href="#" onclick="window.print(); return false;">Print / Save PDF</a>
+          </div>
+        </div>
+      </section>
+
+      <div class="resume-grid">
+        <section class="panel">
+          <h3>Summary</h3>
+          <p>
+            Detail-oriented creative with experience planning shoots, directing subjects,
+            and delivering polished edits. Comfortable collaborating with clients, managing timelines,
+            and adapting quickly in fast-paced environments.
+          </p>
+
+          <h3>Skills</h3>
+          <ul class="bullets two-col">
+            <li>Portrait & event coverage</li>
+            <li>Lighting (natural / basic off-camera)</li>
+            <li>Color correction & retouching</li>
+            <li>Client communication</li>
+            <li>Shot lists & planning</li>
+            <li>Fast turnaround workflows</li>
+            <li>Social-ready exports</li>
+            <li>Basic video capture/editing</li>
+          </ul>
+
+          <h3>Tools</h3>
+          <p class="muted">
+            Lightroom • Photoshop/Affinity • DaVinci Resolve • Sony camera system (A6400)
+          </p>
+        </section>
+
+        <section class="panel">
+          <h3>Experience</h3>
+
+          <div class="role">
+            <div class="role-top">
+              <strong>Freelance Photographer</strong>
+              <span class="muted">Brownsville, Texas • 2025 - 2026</span>
+            </div>
+            <ul class="bullets">
+              <li>Shot portraits and events, delivered curated galleries with consistent edits.</li>
+              <li>Coordinated shoot logistics: locations, timelines, and shot lists.</li>
+              <li>Produced social-ready exports for clients and brands.</li>
+            </ul>
+          </div>
+
+          <!-- <div class="role">
+            <div class="role-top">
+              <strong>Related Job Title</strong>
+              <span class="muted">Company • 20XX–20XX</span>
+            </div>
+            <ul class="bullets">
+              <li>Add your most relevant impact bullet points here.</li>
+              <li>Use numbers when possible (e.g., “edited 200+ photos per event”).</li>
+            </ul>
+          </div> -->
+
+          <h3>Education</h3>
+          <div class="role">
+            <div class="role-top">
+              <strong>University of Texas Rio Grande Valley</strong>
+              <span class="muted">Bachelor in Computer Science /Minor in Film Production • 2026</span>
+            </div>
+            <!-- <p class="muted">Optional: coursework, awards, organizations.</p> -->
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <p class="muted">© <span id="year"></span> Francisco Benavidez</p>
+      <div class="footer-links">
+        <a href="gallery.html">Portfolio</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
