@@ -23,8 +23,10 @@ const sets = {
   events: {
     title: "Events",
     desc: "Coverage that captures moments and atmosphere.",
-    images: ["FFCrowd.PNG", "FFDrawing.JPG", "FFGirl.jpg", "FFLights.jpg", "FFOutsideRestaurant.jpg"]
+    images: ["FFGirl.jpg", "CloseUpPhone.jpg", "FFDrawing.JPG", "FFCrowd.jpg", "Back of Crowd.jpg", 
+      "FFLights.jpg", "FFOutsideRestaurant.jpg", "CloseUpBand.jpg", "Stickers.jpg"]
   },
+
   brands: {
     title: "Brands",
     desc: "Product and lifestyle visuals for social and web.",
@@ -33,7 +35,7 @@ const sets = {
   street: {
     title: "Street / Documentary",
     desc: "Real places, real moments, real stories.",
-    images: ["p4.jpg", "p1.jpg", "p2.jpg", "p6.jpg"]
+    images: ["", "p1.jpg", "p2.jpg", "p6.jpg"]
   },
   video: {
     title: "Video Stills",
@@ -65,8 +67,9 @@ if (projectGrid && projectTitle) {
   if (projectDesc) projectDesc.textContent = set.desc;
 
   projectGrid.innerHTML = set.images
+    .filter(Boolean)
     .map((img) => {
-      const src = `assets/img/${img}`;
+      const src = `assets/img/${key}/${img}`;
       return `
         <div class="shot">
           <img src="${src}" alt="${set.title} photo" loading="lazy" />
