@@ -33,9 +33,10 @@ const sets = {
     images: ["p3.jpg", "p6.jpg", "p2.jpg", "p1.jpg", "p5.jpg"]
   },
   street: {
-    title: "Street / Documentary",
+    title: "Street Photography",
     desc: "Real places, real moments, real stories.",
-    images: ["", "p1.jpg", "p2.jpg", "p6.jpg"]
+    images: ["assets/img/Street Photography/Bike.jpg", "Daisys.jpg", "DoorWithFlowers.jpg", "GasPump.jpg",
+      "OutHouse.jpg", "PurpleFlowers.jpg", "Roses.jpg", "Sign.jpg", "Plants.jpg"]
   },
   video: {
     title: "Video Stills",
