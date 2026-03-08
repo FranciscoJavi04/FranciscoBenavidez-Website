@@ -4,100 +4,68 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Portfolio — Francisco Benavidez</title>
-  <meta name="description" content="Portfolio work by Francisco Benavidez." />
+  <meta name="description" content="Photography portfolio by Francisco Benavidez." />
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="css/style.css" />
   <script defer src="js/main.js"></script>
 </head>
 <body>
-  <header class="header">
-    <div class="container nav">
-      <a class="brand" href="index.html">Francisco Benavidez</a>
-      <button class="nav-toggle" aria-expanded="false" aria-controls="navlinks">Menu</button>
-      <nav id="navlinks" class="navlinks" aria-label="Primary">
-        <a href="index.html">Home</a>
-        <a class="active" href="gallery.html">Portfolio</a>
-        <a href="resume.html">Resume</a>
-        <a href="contact.html">Contact</a>
-      </nav>
+
+<header class="header">
+  <div class="container nav">
+    <a class="brand" href="index.html">Francisco Benavidez</a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="navlinks">Menu</button>
+    <nav id="navlinks" class="navlinks" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a class="active" href="gallery.html">Portfolio</a>
+      <a href="resume.html">Resume</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="section">
+  <div class="container">
+
+    <div class="section-head">
+      <p class="label">My Work</p>
+      <h1>Portfolio</h1>
+      <p>Selected projects. Click a category to view the full set.</p>
     </div>
-  </header>
 
-  <main class="section">
-    <div class="container">
-      <div class="section-head">
-        <h1>Portfolio</h1>
-        <p>Selected projects. Click a category to view a full set.</p>
-      </div>
+    <div class="port-grid">
+      <a class="port-card" href="project.html?set=events">
+        <img src="assets/img/events/FFBand.jpg" alt="Events" loading="lazy" />
+        <div class="port-card-meta">
+          <h3>Events</h3>
+          <p>Parties, graduations, community.</p>
+        </div>
+      </a>
 
-      <!-- Portraits Tab -->
-      <!-- <div class="grid">
-        <a class="card" href="project.html?set=portraits">
-          <img src="assets/img/p1.jpg" alt="Portraits" loading="lazy" />
-          <div class="card-meta">
-            <h3>Portraits</h3>
-            <p>Individuals, couples, seniors.</p>
-          </div>
-        </a> -->
-
-        <a class="card" href="project.html?set=events">
-          <img src="assets/img/events/FFBand.jpg" alt="Events" loading="lazy" />
-          <div class="card-meta">
-            <h3>Events</h3>
-            <p>Parties, graduations, community.</p>
-          </div>
-        </a>
-
-        <!-- Brands Tab
-        <a class="card" href="project.html?set=brands">
-          <img src="assets/img/p3.jpg" alt="Brands" loading="lazy" />
-          <div class="card-meta">
-            <h3>Brands</h3>
-            <p>Product, lifestyle, content.</p>
-          </div>
-        </a>
-      -->
-
-        <a class="card" href="project.html?set=street">
-          <img src="assets/img/events/FFOutsideRestaurant.jpg" alt="Street" loading="lazy" />
-          <div class="card-meta">
-            <h3>Street / Documentary</h3>
-            <p>Real moments, real places.</p>
-          </div>
-        </a>
-
-        <!--  Video Stills tab
-        <a class="card" href="project.html?set=video">
-          <img src="assets/img/p5.jpg" alt="Video" loading="lazy" />
-          <div class="card-meta">
-            <h3>Video Stills</h3>
-            <p>Frames + motion projects.</p>
-          </div>
-        </a>
-        -->
-
-        <!--  Mixed Tab
-        <a class="card" href="project.html?set=mixed">
-          <img src="assets/img/p6.jpg" alt="Mixed" loading="lazy" />
-          <div class="card-meta">
-            <h3>Mixed</h3>
-            <p>Experiments and favorites.</p>
-          </div>
-        </a>
-      -->
-
-      </div>
+      <a class="port-card" href="project.html?set=street">
+        <img src="assets/img/events/FFOutsideRestaurant.jpg" alt="Street" loading="lazy" />
+        <div class="port-card-meta">
+          <h3>Street / Documentary</h3>
+          <p>Real moments, real places.</p>
+        </div>
+      </a>
     </div>
-  </main>
 
-  <footer class="footer">
-    <div class="container footer-grid">
-      <p class="muted">© <span id="year"></span> Francisco Benavidez</p>
-      <div class="footer-links">
-        <a href="contact.html">Contact</a>
-        <a href="resume.html">Resume</a>
-      </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <p class="brand">Francisco Benavidez</p>
+      <p class="muted tiny" style="margin-top:4px;">© <span id="year"></span></p>
     </div>
-  </footer>
+    <div class="footer-links">
+      <a href="contact.html">Contact</a>
+      <a href="resume.html">Resume</a>
+    </div>
+  </div>
+</footer>
+
 </body>
 </html>

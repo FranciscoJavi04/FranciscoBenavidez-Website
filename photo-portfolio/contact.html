@@ -5,99 +5,119 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Contact — Francisco Benavidez</title>
   <meta name="description" content="Contact Francisco Benavidez for photography bookings." />
-  <link rel="icon" href="web_my_headshot.JPG" type="image/svg+xml" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="css/style.css" />
   <script defer src="js/main.js"></script>
 </head>
 <body>
-  <header class="header">
-    <div class="container nav">
-      <a class="brand" href="index.html">Francisco Benavidez</a>
-      <button class="nav-toggle" aria-expanded="false" aria-controls="navlinks">Menu</button>
-      <nav id="navlinks" class="navlinks" aria-label="Primary">
-        <a href="index.html">Home</a>
-        <a href="gallery.html">Portfolio</a>
-        <a href="resume.html">Resume</a>
-        <a class="active" href="contact.html">Contact</a>
-      </nav>
-    </div>
-  </header>
 
-  <main class="section">
-    <div class="container">
-      <div class="section-head">
-        <h1>Contact</h1>
-        <p class="muted">Bookings, questions, collaborations.</p>
+<header class="header">
+  <div class="container nav">
+    <a class="brand" href="index.html">Francisco Benavidez</a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="navlinks">Menu</button>
+    <nav id="navlinks" class="navlinks" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="gallery.html">Portfolio</a>
+      <a href="resume.html">Resume</a>
+      <a class="active" href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="section">
+  <div class="container">
+
+    <div class="section-head">
+      <p class="label">Get in Touch</p>
+      <h1>Contact</h1>
+      <p>Bookings, questions, collaborations.</p>
+    </div>
+
+    <div class="contact-grid">
+
+      <div class="panel">
+        <p class="sublabel">Send a Message</p>
+        <h3 style="margin-bottom:16px;">Let's work together</h3>
+
+        <form class="form" action="https://formspree.io/f/yourFormId" method="POST">
+          <label>
+            Name
+            <input name="name" autocomplete="name" placeholder="Your name" required />
+          </label>
+          <label>
+            Email
+            <input name="email" type="email" autocomplete="email" placeholder="your@email.com" required />
+          </label>
+          <label>
+            What do you need?
+            <select name="type">
+              <option>Portraits</option>
+              <option>Event coverage</option>
+              <option>Brand / product</option>
+              <option>Other</option>
+            </select>
+          </label>
+          <label>
+            Message
+            <textarea name="message" rows="5" placeholder="Tell me about your project…" required></textarea>
+          </label>
+          <button class="btn" type="submit">Send Message</button>
+          <p class="muted tiny">Replace the Formspree URL with your own endpoint.</p>
+        </form>
       </div>
 
-      <div class="contact-grid">
-        <section class="panel">
-          <h2>Send a message</h2>
+      <div class="panel">
+        <p class="sublabel">Details</p>
+        <h3 style="margin-bottom:14px;">Direct contact</h3>
 
-          <!-- Option A (no backend): Formspree. Create a free endpoint and replace the action URL. -->
-          <form class="form" action="https://formspree.io/f/yourFormId" method="POST">
-            <label>
-              Name
-              <input name="name" autocomplete="name" required />
-            </label>
+        <div class="tags" style="flex-direction:column; align-items:flex-start; gap:10px; margin-bottom:20px;">
+          <a class="chip" href="mailto:francisco.jbenavidez04@gmail.com">francisco.jbenavidez04@gmail.com</a>
+          <a class="chip" href="tel:+19564437200">+1 (956) 443-7200</a>
+          <span class="chip">📍 Brownsville, Texas</span>
+        </div>
 
-            <label>
-              Email
-              <input name="email" type="email" autocomplete="email" required />
-            </label>
+        <p style="font-size:13px; color:var(--muted); margin-bottom:20px;">
+          Include your date, location, and what you're looking for.
+          If it's an event, mention start/end times.
+        </p>
 
-            <label>
-              What do you need?
-              <select name="type">
-                <option>Portraits</option>
-                <option>Event coverage</option>
-                <option>Brand / product</option>
-                <option>Other</option>
-              </select>
-            </label>
+        <div class="divider"></div>
 
-            <label>
-              Message
-              <textarea name="message" rows="6" required></textarea>
-            </label>
+        <p class="sublabel">Social</p>
+        <div class="tags" style="flex-direction:column; align-items:flex-start; gap:8px;">
+          <a class="chip" href="https://www.instagram.com/francisco.infocus/" target="_blank" rel="noreferrer">Instagram →</a>
+          <a class="chip" href="http://www.linkedin.com/in/FranciscoJBenavidez" target="_blank" rel="noreferrer">LinkedIn →</a>
+        </div>
 
-            <button class="btn" type="submit">Send</button>
-            <p class="muted tiny">Tip: replace the Formspree URL with yours.</p>
-          </form>
+        <div class="divider"></div>
 
-          <!-- Option B: mailto (works everywhere but less polished)
-          <a class="btn" href="mailto:you@email.com?subject=Photography%20Inquiry">Email me</a>
-          -->
-        </section>
-
-        <aside class="panel">
-          <h2>Details</h2>
-          <p><strong>Email:</strong> francisco.jbenavidez04@gmail.com</p>
-          <p><strong>Location:</strong> Brownsville, Texas</p>
-          <p class="muted">
-            Include your date, location, and what you’re looking for. If it’s an event, mention start/end times.
-          </p>
-
-          <div class="divider"></div>
-
-          <h3>Social</h3>
-          <div class="footer-links">
-            <a href="https://www.instagram.com/francisco.infocus/" target="_blank" rel="noreferrer">Instagram</a>
-            <a href="http://www.linkedin.com/in/FranciscoJBenavidez" target="_blank" rel="noreferrer">LinkedIn</a>
-          </div>
-        </aside>
+        <p class="sublabel">Available For</p>
+        <div class="tags">
+          <span class="tag">Events</span>
+          <span class="tag">Headshots</span>
+          <span class="tag">Graduations</span>
+          <span class="tag">Portraits</span>
+          <span class="tag">Video</span>
+          <span class="tag">Brand / Product</span>
+        </div>
       </div>
-    </div>
-  </main>
 
-  <footer class="footer">
-    <div class="container footer-grid">
-      <p class="muted">© <span id="year"></span> Your Name</p>
-      <div class="footer-links">
-        <a href="gallery.html">Portfolio</a>
-        <a href="resume.html">Resume</a>
-      </div>
     </div>
-  </footer>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <p class="brand">Francisco Benavidez</p>
+      <p class="muted tiny" style="margin-top:4px;">© <span id="year"></span></p>
+    </div>
+    <div class="footer-links">
+      <a href="gallery.html">Portfolio</a>
+      <a href="resume.html">Resume</a>
+    </div>
+  </div>
+</footer>
+
 </body>
 </html>

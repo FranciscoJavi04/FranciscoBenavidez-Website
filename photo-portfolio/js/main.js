@@ -1,6 +1,6 @@
 // --- nav toggle (mobile) ---
 const toggle = document.querySelector(".nav-toggle");
-const nav = document.querySelector("#navlinks");
+const nav    = document.querySelector("#navlinks");
 
 if (toggle && nav) {
   toggle.addEventListener("click", () => {
@@ -17,48 +17,51 @@ if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 const sets = {
   portraits: {
     title: "Portraits",
-    desc: "Natural light, studio, and lifestyle portraits.",
+    desc:  "Natural light, studio, and lifestyle portraits.",
     images: ["p1.jpg", "p4.jpg", "p6.jpg", "p2.jpg", "p3.jpg"]
   },
   events: {
     title: "Events",
-    desc: "Coverage that captures moments and atmosphere.",
-    images: ["FFGirl.jpg", "CloseUpPhone.jpg", "FFDrawing.JPG", "FFCrowd.jpg", "Back of Crowd.jpg", 
-      "FFLights.jpg", "FFOutsideRestaurant.jpg", "CloseUpBand.jpg", "Stickers.jpg"]
+    desc:  "Coverage that captures moments and atmosphere.",
+    images: [
+      "FFGirl.jpg", "CloseUpPhone.jpg", "FFDrawing.JPG", "FFCrowd.jpg",
+      "Back of Crowd.jpg", "FFLights.jpg", "FFOutsideRestaurant.jpg",
+      "CloseUpBand.jpg", "Stickers.jpg"
+    ]
   },
-
   brands: {
     title: "Brands",
-    desc: "Product and lifestyle visuals for social and web.",
+    desc:  "Product and lifestyle visuals for social and web.",
     images: ["p3.jpg", "p6.jpg", "p2.jpg", "p1.jpg", "p5.jpg"]
   },
   street: {
     title: "Street Photography",
-    desc: "Real places, real moments, real stories.",
-    images: ["assets/img/Street Photography/Bike.jpg", "Daisys.jpg", "DoorWithFlowers.jpg", "GasPump.jpg",
-      "OutHouse.jpg", "PurpleFlowers.jpg", "Roses.jpg", "Sign.jpg", "Plants.jpg"]
+    desc:  "Real places, real moments, real stories.",
+    images: [
+      "Bike.jpg", "Daisys.jpg", "DoorWithFlowers.jpg", "GasPump.jpg",
+      "OutHouse.jpg", "PurpleFlowers.jpg", "Roses.jpg", "Sign.jpg", "Plants.jpg"
+    ]
   },
   video: {
     title: "Video Stills",
-    desc: "Frames from motion projects and creative experiments.",
+    desc:  "Frames from motion projects and creative experiments.",
     images: ["p5.jpg", "p3.jpg", "p2.jpg", "p4.jpg"]
   },
   mixed: {
     title: "Mixed",
-    desc: "A blend of favorites and experiments.",
+    desc:  "A blend of favorites and experiments.",
     images: ["p6.jpg", "p1.jpg", "p2.jpg", "p3.jpg", "p4.jpg", "p5.jpg"]
   }
 };
 
 // --- render project page ---
 function getQueryParam(name) {
-  const url = new URL(window.location.href);
-  return url.searchParams.get(name);
+  return new URL(window.location.href).searchParams.get(name);
 }
 
-const projectGrid = document.querySelector("#projectGrid");
+const projectGrid  = document.querySelector("#projectGrid");
 const projectTitle = document.querySelector("#projectTitle");
-const projectDesc = document.querySelector("#projectDesc");
+const projectDesc  = document.querySelector("#projectDesc");
 
 if (projectGrid && projectTitle) {
   const key = getQueryParam("set") || "portraits";
@@ -69,7 +72,7 @@ if (projectGrid && projectTitle) {
 
   projectGrid.innerHTML = set.images
     .filter(Boolean)
-    .map((img) => {
+    .map(img => {
       const src = `assets/img/${key}/${img}`;
       return `
         <div class="shot">

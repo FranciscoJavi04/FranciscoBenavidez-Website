@@ -10,39 +10,48 @@
   <script defer src="js/main.js"></script>
 </head>
 <body>
-  <header class="header">
-    <div class="container nav">
-      <a class="brand" href="index.html">Francisco Benavidez</a>
-      <button class="nav-toggle" aria-expanded="false" aria-controls="navlinks">Menu</button>
-      <nav id="navlinks" class="navlinks" aria-label="Primary">
-        <a href="index.html">Home</a>
-        <a class="active" href="gallery.html">Portfolio</a>
-        <a href="resume.html">Resume</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </div>
-  </header>
 
-  <main class="section">
-    <div class="container">
-      <div class="section-head">
-        <a class="backlink" href="gallery.html">← Back to Portfolio</a>
-        <h1 id="projectTitle">Project</h1>
-        <p id="projectDesc" class="muted"></p>
-      </div>
+<header class="header">
+  <div class="container nav">
+    <a class="brand" href="index.html">Francisco Benavidez</a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="navlinks">Menu</button>
+    <nav id="navlinks" class="navlinks" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a class="active" href="gallery.html">Portfolio</a>
+      <a href="resume.html">Resume</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
 
-      <div id="projectGrid" class="masonry"></div>
-    </div>
-  </main>
+<main class="section">
+  <div class="container">
 
-  <footer class="footer">
-    <div class="container footer-grid">
-      <p class="muted">© <span id="year"></span> Francisco Benavidez</p>
-      <div class="footer-links">
-        <a href="contact.html">Contact</a>
-        <a href="resume.html">Resume</a>
-      </div>
+    <a class="backlink" href="gallery.html">← Back to Portfolio</a>
+
+    <div class="section-head">
+      <p class="label">Project</p>
+      <h1 id="projectTitle">Loading…</h1>
+      <p id="projectDesc" class="muted"></p>
     </div>
-  </footer>
+
+    <div id="projectGrid" class="masonry"></div>
+
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <p class="brand">Francisco Benavidez</p>
+      <p class="muted tiny" style="margin-top:4px;">© <span id="year"></span></p>
+    </div>
+    <div class="footer-links">
+      <a href="contact.html">Contact</a>
+      <a href="resume.html">Resume</a>
+    </div>
+  </div>
+</footer>
+
 </body>
-</html>
+</html> 
