@@ -18,7 +18,7 @@ const sets = {
   headshots: {
     title: "Portraits",
     desc:  "Natural light, studio, and lifestyle portraits.",
-    images: ["FranciscoSmiling.jpg", "FranciscoChinUp.jpg", "FranciscoSideAngel.jpg", "FranciscoLookingDown.jpg"]
+    images: ["FranciscoSmiling.JPG", "FranciscoChinUp.JPG", "FranciscoSideAngel.JPG", "FranciscoLookingDown.JPG"]
   },
   events: {
     title: "Events",
