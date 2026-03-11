@@ -15,19 +15,17 @@ if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 
 // --- project gallery data ---
 const sets = {
-  portraits: {
+  headshots: {
     title: "Portraits",
     desc:  "Natural light, studio, and lifestyle portraits.",
-    images: ["p1.jpg", "p4.jpg", "p6.jpg", "p2.jpg", "p3.jpg"]
+    images: ["FranciscoSmiling.jpg", "FranciscoChinUp.jpg", "FranciscoSideAngel.jpg", "FranciscoLookingDown.jpg"]
   },
   events: {
     title: "Events",
     desc:  "Coverage that captures moments and atmosphere.",
-    images: [
-      "FFGirl.jpg", "CloseUpPhone.jpg", "FFDrawing.JPG", "FFCrowd.jpg",
+    images: ["FFGirl.jpg", "CloseUpPhone.jpg", "FFDrawing.JPG", "FFCrowd.jpg",
       "Back of Crowd.jpg", "FFLights.jpg", "FFOutsideRestaurant.jpg",
-      "CloseUpBand.jpg", "Stickers.jpg"
-    ]
+      "CloseUpBand.jpg", "Stickers.jpg"]
   },
   brands: {
     title: "Brands",
