@@ -11,6 +11,13 @@
 </head>
 <body>
 
+<!-- Animated background mesh -->
+<div class="bg-orbs" aria-hidden="true">
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+</div>
+
 <header class="header">
   <div class="container nav">
     <a class="brand" href="index.html">Francisco Benavidez</a>
@@ -33,15 +40,15 @@
       <p>Selected projects. Click a category to view the full set.</p>
     </div>
 
-    <div class="port-grid">
+    <div class="port-grid" style="grid-template-columns: repeat(3,1fr);">
       <a class="port-card" href="project.html?set=events">
         <img src="assets/img/events/FFBand.jpg" alt="Events" loading="lazy" />
         <div class="port-card-meta">
           <h3>Events</h3>
           <p>Parties, graduations, community.</p>
         </div>
-      </a>       
-      
+      </a>
+
       <a class="port-card" href="project.html?set=street">
         <img src="assets/img/events/FFOutsideRestaurant.jpg" alt="Street" loading="lazy" />
         <div class="port-card-meta">
@@ -51,13 +58,12 @@
       </a>
 
       <a class="port-card" href="project.html?set=headshots">
-          <img src="assets/img/headshots/FranciscoSmiling.JPG" alt="Portraits" loading="lazy" />
-          <div class="port-card-meta">
-            <h3>Portraits</h3>
-            <p>Natural light, studio, and lifestyle portraits.</p>
-          </div>
-        </a>
-
+        <img src="assets/img/headshots/FranciscoSmiling.JPG" alt="Portraits" loading="lazy" />
+        <div class="port-card-meta">
+          <h3>Portraits</h3>
+          <p>Natural light, studio, and lifestyle portraits.</p>
+        </div>
+      </a>
     </div>
 
   </div>
