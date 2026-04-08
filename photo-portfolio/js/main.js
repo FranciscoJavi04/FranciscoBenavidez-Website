@@ -18,7 +18,51 @@ const sets = {
   headshots: {
     title: "Portraits",
     desc:  "Natural light, studio, and lifestyle portraits.",
-    images: ["FranciscoSmiling.JPG", "FranciscoChinUp.JPG", "FranciscoSideAngel.JPG", "FranciscoLookingDown.JPG", "Me.jpg"]
+    images: [
+      "FranciscoSmiling.JPG", "FranciscoChinUp.JPG", "FranciscoSideAngel.JPG", "FranciscoLookingDown.JPG", "Me.jpg",
+      "assets/img/photoshoots/daniela/DSC01614.webp",
+      "assets/img/photoshoots/daniela/DSC01627.webp",
+      "assets/img/photoshoots/daniela/DSC01671.webp",
+      "assets/img/photoshoots/daniela/DSC01703.webp",
+      "assets/img/photoshoots/daniela/DSC01708.webp",
+      "assets/img/photoshoots/daniela/DSC01709.webp",
+      "assets/img/photoshoots/daniela/DSC01721.webp",
+      "assets/img/photoshoots/daniela/DSC01724.webp",
+      "assets/img/photoshoots/daniela/DSC01728.webp",
+      "assets/img/photoshoots/daniela/DSC01730.webp",
+      "assets/img/photoshoots/daniela/DSC01731.webp",
+      "assets/img/photoshoots/daniela/DSC01740.webp",
+      "assets/img/photoshoots/daniela/DSC01760.webp",
+      "assets/img/photoshoots/daniela/DSC01773.webp",
+      "assets/img/photoshoots/daniela/DSC01774.webp",
+      "assets/img/photoshoots/daniela/DSC01775.webp",
+      "assets/img/photoshoots/daniela/DSC01777.webp",
+      "assets/img/photoshoots/daniela/DSC01781.webp",
+      "assets/img/photoshoots/daniela/DSC01784.webp",
+      "assets/img/photoshoots/daniela/DSC01785.webp",
+      "assets/img/photoshoots/daniela/DSC01789.webp",
+      "assets/img/photoshoots/daniela/DSC01792.webp",
+      "assets/img/photoshoots/daniela/DSC01797.webp",
+      "assets/img/photoshoots/daniela/DSC01803.webp",
+      "assets/img/photoshoots/daniela/DSC01805.webp",
+      "assets/img/photoshoots/daniela/DSC01838.webp",
+      "assets/img/photoshoots/daniela/DSC01841.webp",
+      "assets/img/photoshoots/daniela/DSC01848.webp",
+      "assets/img/photoshoots/daniela/DSC01852.webp",
+      "assets/img/photoshoots/daniela/DSC01870.webp",
+      "assets/img/photoshoots/daniela/DSC01876.webp",
+      "assets/img/photoshoots/daniela/DSC01889.webp",
+      "assets/img/photoshoots/daniela/DSC01892.webp",
+      "assets/img/photoshoots/daniela/DSC01900.webp",
+      "assets/img/photoshoots/daniela/DSC01904.webp",
+      "assets/img/photoshoots/daniela/DSC01935.webp",
+      "assets/img/photoshoots/daniela/DSC01943.webp",
+      "assets/img/photoshoots/daniela/DSC01947.webp",
+      "assets/img/photoshoots/daniela/DSC01950.webp",
+      "assets/img/photoshoots/daniela/DSC01964.webp",
+      "assets/img/photoshoots/daniela/DSC01980.webp",
+      "assets/img/photoshoots/daniela/DSC01993.webp"
+    ]
   },
   events: {
     title: "Events",
@@ -69,7 +113,7 @@ if (projectGrid && projectTitle) {
   projectGrid.innerHTML = set.images
     .filter(Boolean)
     .map(img => {
-      const src = `assets/img/${key}/${img}`;
+      const src = img.startsWith("assets/") ? img : `assets/img/${key}/${img}`;
       return `
         <div class="shot">
           <img src="${src}" alt="${set.title} photo" loading="lazy" />
