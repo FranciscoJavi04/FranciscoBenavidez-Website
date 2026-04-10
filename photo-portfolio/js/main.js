@@ -19,7 +19,7 @@ const sets = {
     title: "Portraits",
     desc:  "Natural light, studio, and lifestyle portraits.",
     images: [
-      "FranciscoSmiling.JPG", "FranciscoChinUp.JPG", "FranciscoSideAngel.JPG", "FranciscoLookingDown.JPG", "Me.jpg",
+      "FranciscoSmiling.webp", "FranciscoChinUp.webp", "FranciscoSideAngel.webp", "FranciscoLookingDown.webp", "Me.webp",
       "assets/img/photoshoots/daniela/DSC01614.webp",
       "assets/img/photoshoots/daniela/DSC01627.webp",
       "assets/img/photoshoots/daniela/DSC01671.webp",
@@ -67,9 +67,9 @@ const sets = {
   events: {
     title: "Events",
     desc:  "Coverage that captures moments and atmosphere.",
-    images: ["FFGirl.jpg", "CloseUpPhone.jpg", "FFDrawing.JPG", "FFCrowd.jpg",
-      "Back of Crowd.jpg", "FFLights.jpg", "FFOutsideRestaurant.jpg",
-      "CloseUpBand.jpg", "Stickers.jpg"]
+    images: ["FFGirl.webp", "CloseUpPhone.webp", "FFDrawing.webp", "FFCrowd.webp",
+      "Back of Crowd.webp", "FFLights.webp", "FFOutsideRestaurant.webp",
+      "CloseUpBand.webp", "Stickers.webp"]
   },
   brands: {
     title: "Brands",
@@ -79,8 +79,8 @@ const sets = {
   street: {
     title: "Street Photography",
     desc:  "Real places, real moments, real stories.",
-    images: ["Bike.jpg", "Daisys.jpg", "DoorWithFlowers.jpg", "GasPump.jpg",
-      "OutHouse.jpg", "PurpleFlowers.jpg", "Roses.jpg", "Sign.jpg", "Plants.jpg"]
+    images: ["Bike.webp", "Daisys.webp", "DoorWithFlowers.webp", "GasPump.webp",
+      "OutHouse.webp", "PurpleFlowers.webp", "Roses.webp", "Sign.webp", "Plants.webp"]
   },
   video: {
     title: "Video Stills",
