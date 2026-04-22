@@ -19,7 +19,8 @@ const sets = {
     title: "Portraits",
     desc:  "Natural light, studio, and lifestyle portraits.",
     images: [
-      "FranciscoSmiling.webp", "FranciscoChinUp.webp", "FranciscoSideAngel.webp", "FranciscoLookingDown.webp","assets/img/photoshoots/daniela/DSC01614.webp",
+      "assets/img/photoshoots/headshots/FranciscoSideAngel.webp", "assets/img/photoshoots/headshots/FranciscoChinUp.webp", 
+      "assets/img/photoshoots/headshots/FranciscoLookingDown.webp","assets/img/photoshoots/daniela/DSC01614.webp",
       "assets/img/photoshoots/daniela/DSC01724.webp","assets/img/photoshoots/daniela/DSC01730.webp","assets/img/photoshoots/daniela/DSC01760.webp",
       "assets/img/photoshoots/daniela/DSC01773.webp","assets/img/photoshoots/daniela/DSC01935.webp","assets/img/photoshoots/daniela/DSC01964.webp",
       "assets/img/photoshoots/daniela/DSC01980.webp"
@@ -76,8 +77,10 @@ if (projectGrid && projectTitle) {
   projectGrid.innerHTML = set.images
   .filter(Boolean)
   .map(img => {
-    const sub = set.subfolder ?? key;
-    const src = img.startsWith("assets/") ? img : `assets/img/${key}/${sub}/${img}`;
+    const src = img.startsWith("assets/") ? img
+      : set.subfolder
+        ? `assets/img/${key}/${set.subfolder}/${img}`
+        : `assets/img/${key}/${img}`;
     return `
       <div class="shot">
         <img src="${src}" alt="${set.title} photo" loading="lazy" />
