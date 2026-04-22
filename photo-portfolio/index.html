@@ -54,7 +54,17 @@
         </div>
       </div>
       <div class="hero-media">
-        <img src="assets/img/events/FFCrowd.webp" alt="Featured photograph by Francisco Benavidez" />
+        <div class="hero-slideshow" id="heroSlideshow">
+          <img class="slide" src="assets/img/events/FFCrowd.webp" alt="Featured photograph by Francisco Benavidez" />
+          <img class="slide" src="assets/img/events/FFBand.webp" alt="Featured photograph by Francisco Benavidez" />
+          <img class="slide" src="assets/img/events/FFGirl.webp" alt="Featured photograph by Francisco Benavidez" />
+          <img class="slide" src="assets/img/events/FFLights.webp" alt="Featured photograph by Francisco Benavidez" />
+          <img class="slide" src="assets/img/events/FFOutsideRestaurant.webp" alt="Featured photograph by Francisco Benavidez" />
+          <img class="slide" src="assets/img/events/BehindStand.webp" alt="Featured photograph by Francisco Benavidez" />
+          <img class="slide" src="assets/img/events/CloseUpBand.webp" alt="Featured photograph by Francisco Benavidez" />
+          <img class="slide" src="assets/img/events/WAWindow.webp" alt="Featured photograph by Francisco Benavidez" />
+          <img class="slide" src="assets/img/events/WASunflowers.webp" alt="Featured photograph by Francisco Benavidez" />
+        </div>
       </div>
     </div>
   </section>
@@ -102,6 +112,15 @@
             <p>Everyday moments and urban life.</p>
           </div>
         </a>
+
+        <a class="port-card" href="project.html?set=business">
+        <img src="assets/img/Business/Lemonade/lemon02.webp" alt="Business" loading="lazy" />
+        <div class="port-card-meta">
+          <h3>Business</h3>
+          <p>Product and lifestyle visuals for social and web.</p>
+        </div>
+      </a>
+      
       </div>
     </div>
   </section>
@@ -152,6 +171,25 @@
     </div>
   </div>
 </footer>
+
+<script>
+  (function () {
+    const slides = Array.from(document.querySelectorAll('#heroSlideshow .slide'));
+    // Fisher-Yates shuffle so order is random each page load
+    for (let i = slides.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      slides[i].parentNode.insertBefore(slides[j], slides[i]);
+      slides.splice(i, 0, slides.splice(j, 1)[0]);
+    }
+    let current = 0;
+    slides[current].classList.add('active');
+    setInterval(function () {
+      slides[current].classList.remove('active');
+      current = (current + 1) % slides.length;
+      slides[current].classList.add('active');
+    }, 5000);
+  })();
+</script>
 
 </body>
 </html>
