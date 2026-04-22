@@ -53,6 +53,27 @@
   /* ── Motion ── */
   --spring: 0.28s cubic-bezier(0.34, 1.45, 0.64, 1);
   --ease:   0.22s ease;
+
+  /* ── Component backgrounds (theme-sensitive) ── */
+  --header-bg:              rgba(6,6,16,0.45);
+  --footer-bg:              rgba(6,6,16,.4);
+  --nav-pill-bg:            rgba(255,255,255,.04);
+  --nav-pill-border:        rgba(255,255,255,.08);
+  --nav-hover-bg:           rgba(255,255,255,.06);
+  --nav-active-bg:          rgba(255,255,255,.10);
+  --nav-active-border:      rgba(255,255,255,.15);
+  --nav-mobile-bg:          rgba(6,6,16,.92);
+  --section-alt-bg:         rgba(255,255,255,0.012);
+  --input-bg:               rgba(255,255,255,.05);
+  --input-border:           rgba(255,255,255,.10);
+  --tag-bg:                 rgba(255,255,255,.04);
+  --tag-border:             rgba(255,255,255,.09);
+  --card-hover-border:      rgba(255,255,255,.22);
+  --btn-ghost-bg:           rgba(255,255,255,.05);
+  --btn-ghost-border:       rgba(255,255,255,.12);
+  --btn-ghost-hover-bg:     rgba(255,255,255,.09);
+  --btn-ghost-hover-border: rgba(255,255,255,.20);
+  --select-bg:              #111;
 }
 
 /* ══════════════════════════════════════════════════
@@ -134,7 +155,7 @@ header, main, footer { position: relative; z-index: 1; }
 
 .section        { padding: clamp(40px, 6vw, 80px) 0; }
 .section.alt    {
-  background: rgba(255,255,255,0.012);
+  background: var(--section-alt-bg);
   border-top:    1px solid var(--glass-border);
   border-bottom: 1px solid var(--glass-border);
 }
@@ -267,7 +288,7 @@ h1 span, h2 span {
   z-index: 100;
   padding: 10px 0;
   /* glass bar */
-  background: rgba(6,6,16,0.45);
+  background: var(--header-bg);
   backdrop-filter: blur(32px) saturate(180%);
   -webkit-backdrop-filter: blur(32px) saturate(180%);
   border-bottom: 1px solid var(--glass-border);
@@ -297,8 +318,8 @@ h1 span, h2 span {
   gap: 2px;
   align-items: center;
   /* pill container */
-  background: rgba(255,255,255,.04);
-  border: 1px solid rgba(255,255,255,.08);
+  background: var(--nav-pill-bg);
+  border: 1px solid var(--nav-pill-border);
   border-radius: var(--radius-pill);
   padding: 4px;
 }
@@ -316,13 +337,13 @@ h1 span, h2 span {
 
 .navlinks a:hover {
   color: var(--text);
-  background: rgba(255,255,255,.06);
+  background: var(--nav-hover-bg);
 }
 
 .navlinks a.active {
   color: var(--text);
-  background: rgba(255,255,255,.10);
-  border-color: rgba(255,255,255,.15);
+  background: var(--nav-active-bg);
+  border-color: var(--nav-active-border);
   box-shadow: inset 0 1px 0 rgba(255,255,255,.12),
               0 2px 8px rgba(0,0,0,.25);
 }
@@ -387,15 +408,15 @@ h1 span, h2 span {
 .btn:active { transform: translateY(0); }
 
 .btn.ghost {
-  background: rgba(255,255,255,.05);
-  border-color: rgba(255,255,255,.12);
+  background: var(--btn-ghost-bg);
+  border-color: var(--btn-ghost-border);
   box-shadow: inset 0 1px 0 rgba(255,255,255,.08),
               0 4px 16px rgba(0,0,0,.2);
 }
 
 .btn.ghost:hover {
-  background: rgba(255,255,255,.09);
-  border-color: rgba(255,255,255,.20);
+  background: var(--btn-ghost-hover-bg);
+  border-color: var(--btn-ghost-hover-border);
   box-shadow: inset 0 1px 0 rgba(255,255,255,.12),
               0 6px 20px rgba(0,0,0,.25);
 }
@@ -420,8 +441,8 @@ h1 span, h2 span {
   color: var(--text-2);
   padding: 5px 13px;
   border-radius: var(--radius-pill);
-  border: 1px solid rgba(255,255,255,.09);
-  background: rgba(255,255,255,.04);
+  border: 1px solid var(--tag-border);
+  background: var(--tag-bg);
   backdrop-filter: blur(8px);
   transition: border-color var(--ease), color var(--ease), background var(--ease);
   cursor: default;
@@ -442,8 +463,8 @@ h1 span, h2 span {
   color: var(--text-2);
   padding: 8px 16px;
   border-radius: var(--radius-pill);
-  border: 1px solid rgba(255,255,255,.09);
-  background: rgba(255,255,255,.04);
+  border: 1px solid var(--tag-border);
+  background: var(--tag-bg);
   backdrop-filter: blur(8px);
   transition: color var(--ease), border-color var(--ease), background var(--ease);
   box-shadow: inset 0 1px 0 rgba(255,255,255,.07);
@@ -601,7 +622,7 @@ h1 span, h2 span {
 
 .port-card:hover {
   transform: translateY(-6px);
-  border-color: rgba(255,255,255,.22);
+  border-color: var(--card-hover-border);
   box-shadow: 0 20px 60px rgba(0,0,0,.55),
               0 4px 16px rgba(145,216,255,.1),
               inset 0 1px 0 rgba(255,255,255,.12);
@@ -715,7 +736,7 @@ h1 span, h2 span {
 
 .masonry .shot:hover {
   transform: translateY(-3px);
-  border-color: rgba(255,255,255,.22);
+  border-color: var(--card-hover-border);
   box-shadow: 0 12px 40px rgba(0,0,0,.5);
 }
 
@@ -782,8 +803,8 @@ input, select, textarea {
   width: 100%;
   padding: 11px 16px;
   border-radius: var(--radius-sm);
-  border: 1px solid rgba(255,255,255,.1);
-  background: rgba(255,255,255,.05);
+  border: 1px solid var(--input-border);
+  background: var(--input-bg);
   backdrop-filter: blur(10px);
   color: var(--text);
   font-family: 'Plus Jakarta Sans', sans-serif;
@@ -802,7 +823,7 @@ input:focus, select:focus, textarea:focus {
               inset 0 1px 0 rgba(255,255,255,.07);
 }
 
-select option { background: #111; }
+select option { background: var(--select-bg); }
 
 /* ══════════════════════════════════════════════════
    ABOUT
@@ -820,7 +841,7 @@ select option { background: #111; }
 .footer {
   padding: 32px 0;
   border-top: 1px solid var(--glass-border);
-  background: rgba(6,6,16,.4);
+  background: var(--footer-bg);
   backdrop-filter: blur(20px);
 }
 
@@ -896,7 +917,7 @@ main > *:nth-child(4) { animation-delay: 0.18s; }
     position: absolute;
     right: var(--pad);
     top: 62px;
-    background: rgba(6,6,16,.92);
+    background: var(--nav-mobile-bg);
     backdrop-filter: blur(32px);
     border: 1px solid var(--glass-border);
     border-radius: var(--radius);
@@ -920,4 +941,137 @@ main > *:nth-child(4) { animation-delay: 0.18s; }
   .masonry    { columns: 1; }
   .card-grid  { grid-template-columns: 1fr; }
   .hero-media img { height: 280px; }
+}
+
+/* ══════════════════════════════════════════════════
+   LIGHT MODE  (system preference)
+══════════════════════════════════════════════════ */
+@media (prefers-color-scheme: light) {
+  :root {
+    /* ── Backgrounds ── */
+    --bg:        #f4f4ff;
+    --bg-mid:    #eaeaf8;
+
+    /* ── Glass surfaces ── */
+    --glass:            rgba(255,255,255,.65);
+    --glass-hov:        rgba(255,255,255,.80);
+    --glass-border:     rgba(0,0,0,.08);
+    --glass-border-hov: rgba(0,0,0,.15);
+    --glass-specular:   rgba(255,255,255,.9);
+    --glass-shadow:     0 8px 40px rgba(0,0,0,.10),
+                        0 2px 10px rgba(0,0,0,.05),
+                        inset 0 1px 0 rgba(255,255,255,.8);
+
+    /* ── Text ── */
+    --text:   #12122a;
+    --text-2: #3a4268;
+    --muted:  #7080a8;
+
+    /* ── Orbs ── */
+    --orb1: rgba(90,150,255,.18);
+    --orb2: rgba(170,100,255,.13);
+    --orb3: rgba(60,210,190,.10);
+    --iri-glow: rgba(145,216,255,.22);
+
+    /* ── Component backgrounds ── */
+    --header-bg:              rgba(244,244,255,.85);
+    --footer-bg:              rgba(244,244,255,.75);
+    --nav-pill-bg:            rgba(0,0,0,.04);
+    --nav-pill-border:        rgba(0,0,0,.07);
+    --nav-hover-bg:           rgba(0,0,0,.05);
+    --nav-active-bg:          rgba(0,0,0,.07);
+    --nav-active-border:      rgba(0,0,0,.12);
+    --nav-mobile-bg:          rgba(244,244,255,.97);
+    --section-alt-bg:         rgba(0,0,0,.025);
+    --input-bg:               rgba(255,255,255,.70);
+    --input-border:           rgba(0,0,0,.10);
+    --tag-bg:                 rgba(255,255,255,.55);
+    --tag-border:             rgba(0,0,0,.08);
+    --card-hover-border:      rgba(0,0,0,.14);
+    --btn-ghost-bg:           rgba(0,0,0,.04);
+    --btn-ghost-border:       rgba(0,0,0,.09);
+    --btn-ghost-hover-bg:     rgba(0,0,0,.07);
+    --btn-ghost-hover-border: rgba(0,0,0,.14);
+    --select-bg:              #f0f0ff;
+  }
+
+  /* Header & footer shadow adjustment */
+  .header {
+    box-shadow: 0 1px 24px rgba(0,0,0,.10),
+                inset 0 1px 0 rgba(255,255,255,.7);
+  }
+
+  /* Nav active pill shadow */
+  .navlinks a.active {
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.5),
+                0 2px 8px rgba(0,0,0,.08);
+  }
+
+  /* Card hover shadows */
+  .port-card:hover {
+    box-shadow: 0 20px 60px rgba(0,0,0,.14),
+                0 4px 16px rgba(145,216,255,.12),
+                inset 0 1px 0 rgba(255,255,255,.8);
+  }
+
+  .feat-card {
+    box-shadow: 0 4px 20px rgba(0,0,0,.08),
+                inset 0 1px 0 rgba(255,255,255,.8);
+  }
+
+  .feat-card:hover {
+    border-color: rgba(0,0,0,.12);
+    box-shadow: 0 12px 40px rgba(0,0,0,.12),
+                0 2px 10px rgba(145,216,255,.10),
+                inset 0 1px 0 rgba(255,255,255,.9);
+  }
+
+  /* Masonry shot shadows */
+  .masonry .shot {
+    box-shadow: 0 4px 20px rgba(0,0,0,.10);
+  }
+
+  .masonry .shot:hover {
+    box-shadow: 0 12px 40px rgba(0,0,0,.16);
+  }
+
+  /* Images */
+  .hero-media img {
+    box-shadow: 0 24px 60px rgba(0,0,0,.18),
+                inset 0 1px 0 rgba(255,255,255,.8);
+  }
+
+  .headshot {
+    box-shadow: 0 12px 40px rgba(0,0,0,.14),
+                inset 0 1px 0 rgba(255,255,255,.8);
+  }
+
+  /* Form focus */
+  input:focus, select:focus, textarea:focus {
+    background: rgba(255,255,255,.90);
+    box-shadow: 0 0 0 3px rgba(145,216,255,.15),
+                inset 0 1px 0 rgba(255,255,255,.9);
+  }
+
+  /* Ghost button shadows */
+  .btn.ghost {
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.5),
+                0 4px 16px rgba(0,0,0,.08);
+  }
+
+  .btn.ghost:hover {
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.6),
+                0 6px 20px rgba(0,0,0,.10);
+  }
+
+  /* Primary button adjustments */
+  .btn {
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.4),
+                0 4px 16px rgba(0,0,0,.10);
+  }
+
+  .btn:hover {
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.5),
+                0 6px 24px rgba(145,216,255,.22);
+  }
 }
